@@ -1,134 +1,309 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
 }
 
-header {
-  background: linear-gradient(135deg, #ff7a18, #ffb347);
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.container {
-  padding: 20px;
-  margin-right: 280px;
-}
-
-select {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-}
-
-.menu-item {
-  background: white;
-  margin: 12px 0;
-  padding: 15px;
-  border-radius: 12px;
+/* NAVBAR */
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 18px 30px;
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+}
+
+
+nav div {
+  display: flex;
+  gap: 15px;
+
+}
+
+
+/* BRAND TITLE */
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #dfe2e4, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* BUTTONS */
+button {
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
   transition: 0.2s;
 }
 
-.menu-item:hover {
-  transform: scale(1.02);
+.tagline {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #94a3b8;
+  font-style: italic;
 }
 
-button {
-  background: #28a745;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
+.tagline span {
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 button:hover {
-  background: #218838;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
 }
 
-.cart {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 260px;
+/* LOGIN */
+.login {
   height: 100vh;
-  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #1e293b, #020617);
+}
+
+.login-box {
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 14px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.login-box h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  color: #94a3b8;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  background: #020617;
+  border: 1px solid #334155;
+  color: white;
+  border-radius: 6px;
+}
+
+/* HOME */
+.home {
+  text-align: center;
+  padding: 40px;
+}
+
+.hero img {
+  width: 70%;
+  border-radius: 12px;
+  margin: 20px 0;
+  opacity: 0.9;
+}
+
+.home h1 {
+  padding-bottom: 100px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  width: 180px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #38bdf8;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* MENU */
+.menu {
+  padding: 20px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.menu-card {
+  background: #1e293b;
   padding: 15px;
-  border-left: 2px solid #eee;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: 1px solid #334155;
+  transition: 0.2s;
 }
 
-.cart h2 {
-  margin-top: 0;
+.menu-card:hover {
+  border-color: #38bdf8;
+  transform: scale(1.02);
 }
 
-li {
+.menu-card p {
+  color: #94a3b8;
+}
+
+/* CART POPUP */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 6, 23, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.cart-box {
+  background: #1e293b;
+  padding: 25px;
+  width: 420px;
+  max-height: 80vh;
+  /* 🔥 limits height */
+  overflow-y: auto;
+  /* 🔥 enables scroll */
+  border-radius: 12px;
+}
+
+.cart-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 
-li button {
-  background: red;
-  padding: 3px 8px;
+.card img {
+  width: 100%;
+  height: 120px;
+  /* 🔥 fixed height */
+  object-fit: cover;
+  /* 🔥 crops nicely */
+  border-radius: 8px;
 }
 
-li div {
+.cart-footer {
+  margin-top: 20px;
   display: flex;
+  justify-content: space-around;
+  gap: 15px;
+
+}
+
+.cart-total {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #334155;
+  text-align: right;
+}
+
+.cart-total h3 {
+  color: #38bdf8;
+}
+
+.qty {
+  display: flex;
+  gap: 6px;
   align-items: center;
-  gap: 5px;
 }
 
-li button {
-  background: #007bff;
-  padding: 3px 8px;
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #38bdf8;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 6px;
 }
 
-@keyframes App-logo-spin {
+.success-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 6, 23, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.success-box {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  border: 1px solid #38bdf8;
+  animation: pop 0.3s ease;
+}
+
+.success-box h2 {
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.success-box p {
+  color: #94a3b8;
+}
+
+@keyframes pop {
   from {
-    transform: rotate(0deg);
+    transform: scale(0.8);
+    opacity: 0;
   }
 
   to {
-    transform: rotate(360deg);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
